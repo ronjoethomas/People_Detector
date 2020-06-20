@@ -39,8 +39,7 @@ while True:
     e=0
     for x,y,w,h in faces_profile:
         cv2.rectangle(frame, (x,y),(x+w,y+h), (12,255,22),4)
-        for e in range(len(faces_profile)):
-            cv2.putText(frame,'Human #'+str(e+len(faces_front)+1),(x,y-int(y/15)),cv2.FONT_HERSHEY_COMPLEX,0.5,(0,255,140),1)
+        cv2.putText(frame,'Human #'+str(e+len(faces_front)+1),(x,y-int(y/15)),cv2.FONT_HERSHEY_COMPLEX,0.5,(0,255,140),1)
     
 
     #create warning if the amount of faces is greater than a certain number
